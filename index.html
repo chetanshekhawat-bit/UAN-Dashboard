@@ -714,8 +714,11 @@
 
 
 
+      // Google Sheet backend URL (Published as CSV)
+      const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS49hLuMzNNr-AGWXRQHVy3a5GNyxHxLm2Skj3ghr86yAUAR0Kz9SREaZCUrRAfMrnzlbtx21eTFSbB/pub?output=csv';
+
       function loadCSVData() {
-        Papa.parse('data.csv', {
+        Papa.parse(GOOGLE_SHEET_CSV_URL, {
           download: true,
           header: true,
           skipEmptyLines: true,
